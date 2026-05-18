@@ -11,10 +11,15 @@ class Pet {
   }
 }
 
+class Dog extends Pet {
+  constructor(name, breed) {
+    super(name, breed);
+  }
+}
 
 
-
-
+const myDog = new Dog("Buddy", "Golden Retriever");
+console.log(myDog.show());
 
 
 

@@ -36,3 +36,32 @@ class Person {
     }
   }
 }
+
+class Student extends Person {
+  constructor(name, age, grade) {
+    super(name, age); 
+    this.grade = grade;
+  }
+
+  displayStudentDetails() {
+    return `${this.displayDetails()} I am in grade ${this.grade}.`;
+  }
+}
+
+class Teacher extends Person {
+  constructor(name, age, subject) {
+    super(name, age); 
+    this.subject = subject;
+  }
+
+  displayTeacherDetails() {
+    return `${this.displayDetails()} I teach ${this.subject}.`;
+  }
+}
+
+
+const student1 = new Student("Alice", 20, "Sophomore");
+console.log(student1.displayStudentDetails());
+
+const teacher1 = new Teacher("Mr. Smith", 45, "Mathematics");
+console.log(teacher1.displayTeacherDetails());
